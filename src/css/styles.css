@@ -8,10 +8,6 @@
 @import url('./reset.css');
 @import url('./base.css');
 
-.hidden {
-  display: none;
-}
-
 body {
   margin: 20px;
   background: #fff;
@@ -32,6 +28,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 50px;
 }
 
 .gallery li {
@@ -54,6 +51,7 @@ body {
   justify-content: space-around;
   padding: 10px;
   margin: 0;
+
   list-style: none;
   background-color: #f8f8f8;
   font-size: 14px;
@@ -66,6 +64,29 @@ body {
   display: block;
 }
 
+.loader.hidden,
+.load-more-btn.hidden {
+  display: none;
+}
+
+.load-more-btn {
+  border: none;
+  border-radius: 16px;
+  height: 40px;
+  width: 360px;
+  margin: 0 auto;
+  cursor: pointer;
+  background-color: #0077ff;
+  color: #ffff;
+  transition: background 0.3s linear;
+  font-weight: 700;
+}
+
+.load-more-btn:hover,
+.load-more-btn:focus {
+  background-color: #005fcc;
+}
+
 .form button {
   padding: 8px 16px;
   font-size: 16px;
@@ -74,9 +95,10 @@ body {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s linear;
 }
 
-.form button:hover {
+.form button:hover,
+form button:focus {
   background-color: #005fcc;
 }
