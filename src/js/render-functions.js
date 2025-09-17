@@ -7,12 +7,12 @@ const galleryEl = document.querySelector('.gallery');
 
 const loaderEl = document.querySelector('.loader');
 
-const simplelightbox = new SimpleLightbox('.gallery a');
+export const simplelightbox = new SimpleLightbox('.gallery a');
 
 const btnEl = document.querySelector('.load-more-btn');
 
 export function createGallery(images) {
-  const markup = images
+  return images
     .map(
       ({
         webformatURL,
@@ -52,10 +52,6 @@ export function createGallery(images) {
       }
     )
     .join('');
-
-  galleryEl.innerHTML = markup;
-
-  simplelightbox.refresh();
 }
 
 export function clearGallery() {
